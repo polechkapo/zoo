@@ -12,7 +12,7 @@ module.exports = function Navigation({ admin }) {
         )
           : (
             <>
-              <li className="navigation__item"><a href="/auth">Вход для сотрудников</a></li>
+              <li className="navigation__item"><a href="/auth/login">Вход для сотрудников</a></li>
               <li className="navigation__item"><a href="/home">Главная</a></li>
             </>
           )}

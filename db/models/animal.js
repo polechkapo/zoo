@@ -20,7 +20,11 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.TEXT
     },
     admin_id: {
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Admin',
+        key: 'id',
+      },
     },
   }, {
     sequelize,

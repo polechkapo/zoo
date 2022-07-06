@@ -8,6 +8,7 @@ const authRouter = require('./routes/view/auth_router')
 
 const homeRouter = require('./routes/view/home_router');
 const animalsRouter = require('./routes/view/animallist_router')
+const tariffRouter = require('./routes/view/tariff_roter')
 
 const PORT = process.env.PORT ?? 3000;
 
@@ -19,6 +20,7 @@ app.get('/', (req, res) => {
 
 app.use('/home', homeRouter);
 app.use('/animals', animalsRouter);
+app.use('/tariffs', tariffRouter)
 
 app.use('/auth', authRouter)
 app.listen(PORT, () => {

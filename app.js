@@ -5,6 +5,7 @@ const app = require('express')();
 const configApp = require('./config/config_app'); // подключаем конфиги
 
 const homeRouter = require('./routes/view/home_router');
+const animalsRouter = require('./routes/view/animallist_router')
 
 const PORT = process.env.PORT ?? 3000;
 
@@ -15,6 +16,7 @@ app.get('/', (req, res) => {
 });
 
 app.use('/home', homeRouter);
+app.use('/animals', animalsRouter);
 
 app.listen(PORT, () => {
   console.log(`Сервер шуршит на ${PORT}`);

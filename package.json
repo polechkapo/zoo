@@ -1,0 +1,20 @@
+{
+  "name": "zoo",
+  "version": "1.0.0",
+  "description": "Сайт урюпинского зоопарка",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/polechkapo/zoo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/polechkapo/zoo/issues"
+  },
+  "homepage": "https://github.com/polechkapo/zoo#readme"
+}

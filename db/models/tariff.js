@@ -4,22 +4,26 @@ const {
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Tariff extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
-    }
+  
+    static associate() {};
   }
   Tariff.init({
-    day_type: DataTypes.TEXT,
-    human_type: DataTypes.TEXT,
-    price: DataTypes.INTEGER
+    day_type: {
+      allowNull: false,
+      type: DataTypes.TEXT
+    },
+    human_type: {
+      allowNull: false,
+      type: DataTypes.TEXT
+    },
+    price: {
+      allowNull: false,
+      type: DataTypes.INTEGER
+    },
   }, {
     sequelize,
     modelName: 'Tariff',
+    tableName: 'Tariffs'
   });
   return Tariff;
 };

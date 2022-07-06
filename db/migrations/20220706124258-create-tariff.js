@@ -9,12 +9,15 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       day_type: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       human_type: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       price: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       createdAt: {
@@ -27,7 +30,7 @@ module.exports = {
       }
     });
   },
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.dropTable('Tariffs');
   }
 };

@@ -9,9 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       animal_id: {
+        allowNull: false,
         type: Sequelize.INTEGER
       },
       img_href: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       createdAt: {
@@ -24,7 +26,7 @@ module.exports = {
       }
     });
   },
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.dropTable('Photos');
   }
 };

@@ -9,9 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       name: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       desc: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       admin_id: {
@@ -27,7 +29,7 @@ module.exports = {
       }
     });
   },
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
     await queryInterface.dropTable('Animals');
   }
 };

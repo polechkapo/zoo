@@ -1,10 +1,17 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Tariff() {
+module.exports = function Tariff({tariffs}) {
   return (
     <Layout>
-    <table className="table">
+      {tariffs.map((price) => (
+        <li id={`${price.id}`}>
+          <h1>{`${price.day_type}`}</h1>
+          <h1>{`${price.human_type}`}</h1>
+          <h1>{`${price.price}`}</h1>
+        </li>
+      ))}
+    {/* <table className="table">
       <head>
         <tr>
           <th scope="col">#</th>
@@ -32,7 +39,7 @@ module.exports = function Tariff() {
           <td>@twitter</td>
         </tr>
       </body>
-    </table>
+    </table> */}
     </Layout>
   );
 };

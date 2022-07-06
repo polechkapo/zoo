@@ -20,6 +20,7 @@ app.get('/', (req, res) => {
 app.use('/home', homeRouter);
 app.use('/animals', animalsRouter);
 
+
 app.use('/auth', authRouter)
 app.listen(PORT, () => {
   console.log(`Сервер шуршит на ${PORT}`);

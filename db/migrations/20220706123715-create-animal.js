@@ -17,9 +17,9 @@ module.exports = {
         type: Sequelize.TEXT
       },
       admin_id: {
-        type: DataTypes.INTEGER,
+        type: Sequelize.INTEGER,
         references: {
-          model: 'Admin',
+          model: 'Admins',
           key: 'id',
         },
       },

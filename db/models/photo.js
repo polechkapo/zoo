@@ -12,7 +12,11 @@ module.exports = (sequelize, DataTypes) => {
   Photo.init({
     animal_id: {
       allowNull: false,
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
+      references: {
+        model: 'Animals',
+        key: 'id',
+      }
     },
     img_href: {
       allowNull: false,

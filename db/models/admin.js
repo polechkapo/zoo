@@ -3,19 +3,20 @@ const {
   Model
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
-  class Admin extends Model {
-    /**
-     * Helper method for defining associations.
-     * This method is not a part of Sequelize lifecycle.
-     * The `models/index` file will call this method automatically.
-     */
-    static associate(models) {
-      // define association here
+  class Admin extends Model {   
+    static associate({Animal}) {
+      Admin.hasMany(Animal, {foreignKey: 'id'})
     }
-  }
+  };
   Admin.init({
-    login: DataTypes.TEXT,
-    password: DataTypes.TEXT
+    login: {
+      allowNull: false,
+      type: DataTypes.TEXT
+    },
+    password: {
+      allowNull: false,
+      type: DataTypes.TEXT
+    },
   }, {
     sequelize,
     modelName: 'Admin',

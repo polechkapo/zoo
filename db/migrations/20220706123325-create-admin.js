@@ -9,9 +9,11 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       login: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       password: {
+        allowNull: false,
         type: Sequelize.TEXT
       },
       createdAt: {

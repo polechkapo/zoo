@@ -1,12 +1,10 @@
 const React = require('react');
-// const { Context } = require('../middlewares/ssr');
+const { Context } = require('../middlewares/ssr');
 
-module.exports = function Navigation({ admin }) {
-  // const { admin } = React.useContext(Context);
+module.exports = function Navigation() {
+  const { admin } = React.useContext(Context);
   return (
     <nav className="navigation">
-      {/* <p>{`======>${admin}`}</p>
-      <p>{`======>${Context}`}</p> */}
       <ul className="navigation__lists">
         {admin ? (
           <>

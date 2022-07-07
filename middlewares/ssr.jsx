@@ -1,5 +1,3 @@
-/* eslint-disable react/jsx-props-no-spreading */
-/* eslint-disable react/jsx-no-constructed-context-values */
 const ReactDOMServer = require('react-dom/server');
 const React = require('react');
 

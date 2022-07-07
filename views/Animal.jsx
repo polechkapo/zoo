@@ -41,3 +41,4 @@ module.exports = function Animal({ animal }) {
     </Layout>
   );
 };
+  

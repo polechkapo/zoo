@@ -8,7 +8,7 @@ module.exports = function Navigation() {
       <ul className="navigation__lists">
         {admin ? (
           <>
-            <li className="navigation__item"><a href="/logout">Выйти</a></li>
+            <li className="navigation__item"><a href="/auth/logout">Выйти</a></li>
             <li className="navigation__item"><a href="/home">Главная</a></li>
             <li className="navigation__item"><a href="/cabinet">Кабинет Администратора</a></li>
           </>

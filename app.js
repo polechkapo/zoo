@@ -10,6 +10,7 @@ const tariffRouter = require('./routes/view/tariff_roter');
 const deleteCardRout = require('./routes/api/delete_card_router');
 const authRouter = require('./routes/view/auth_router');
 const AdminCabinetRouter =require('./routes/view/admin_cabinet_router')
+const animalsApiRouter = require('./routes/api/Animals_api_router');
 
 const PORT = process.env.PORT ?? 3000;
 
@@ -23,9 +24,9 @@ app.use('/home', homeRouter);
 app.use('/auth', authRouter);
 app.use('/cabinet', AdminCabinetRouter);
 app.use('/animals', animalsRouter);
+app.use('/animalsApi', animalsApiRouter);
 app.use('/tariffs', tariffRouter);
 app.use('/animals', deleteCardRout)
-
 
 app.listen(PORT, () => {
   console.log(`Сервер шуршит на ${PORT}`);

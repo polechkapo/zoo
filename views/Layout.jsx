@@ -11,6 +11,7 @@ module.exports = function Layout({ title, children }) {
         <script src="/js/client.js" defer />
         <link href="/css/stylesheets.css" rel="stylesheet" />
         <title>{ title }</title>
+        <script src="/js/client.js" defer />
       </head>
       <header className="header">
         <img src="/images/obz.jpeg" alt="Логотип урюпинского зоопарка" className="bar-img" />

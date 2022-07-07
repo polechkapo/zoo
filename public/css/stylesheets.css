@@ -48,7 +48,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
-	background-color:lightslategrey;
+	background-color:black;
 	align-items: flex-end;
 }
 
@@ -56,7 +56,7 @@ body {
 	display: flex;
 	justify-content: space-between;
 	padding: 20px;
-	background-color:lightslategrey;
+	background-color:black;
 	color: white;
 	line-height: 18px;
 	padding-left: 40px;
@@ -141,8 +141,8 @@ a {
 }
 
 .content__img {
-	width: 500px;
-	height: 360px;
+	width: 450px;
+	height: 450px;
 }
 
 .content__lists {
@@ -206,6 +206,7 @@ a {
 	color: white;
 	border: 0px;
 	border-radius: 15px;
+	padding-bottom: 20px;
 }
 
 .btn-price {
@@ -215,6 +216,6 @@ a {
 }
 
 .btn-price:hover {
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 }

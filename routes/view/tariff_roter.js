@@ -5,7 +5,6 @@ const { Tariff } = require('../../db/models');
 tariffRouter.route('/')
   .get(async (req, res) => {
     const tariffs = await Tariff.findAll({raw: true});
-    console.log(tariffs);
     res.renderComponent(TariffPage, { tariffs })
   })
 

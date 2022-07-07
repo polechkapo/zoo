@@ -12,11 +12,11 @@ module.exports = function AnimalList({ animals, photosList, admin}) {
             <p>{card.desc}</p>
             {admin ? (
               <div className="card__edit-buttons">
-                <a href={`/animals/${card.id}/edit`}>Изменить</a>
-                <a href={`/animals/${card.id}/delete`}>Удалить</a>
+                <a href={`animals/${card.id}/edit`}>Изменить</a>
+                <a href={`animals/${card.id}/delete`}>Удалить</a>
               </div>
             )
-              : <a href={`/animals/${card.id}/info`}>Подробнее</a>}
+              : <a href={`animals/${card.id}/info`}>Подробнее</a>}
           </li>
         ))}
       </ul>

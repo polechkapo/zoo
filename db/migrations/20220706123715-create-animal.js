@@ -22,6 +22,8 @@ module.exports = {
           model: 'Admins',
           key: 'id',
         },
+        onDelete: 'cascade',
+        onUpdate: 'cascade',
       },
       createdAt: {
         allowNull: false,

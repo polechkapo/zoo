@@ -1,5 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
+const { Context } = require('../middlewares/ssr');
+
 
 module.exports = function AnimalList({ animals, photosList, admin }) {
   return (
@@ -23,7 +25,7 @@ module.exports = function AnimalList({ animals, photosList, admin }) {
             </li>
           ))}
         </ul>
-      
+
     </Layout>
   );
 };

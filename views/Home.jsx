@@ -1,7 +1,7 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function Home({}) {
+module.exports = function Home() {
   return (
     <Layout>
       <div>Приветствие</div><br></br>

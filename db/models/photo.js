@@ -6,7 +6,7 @@ module.exports = (sequelize, DataTypes) => {
   class Photo extends Model {
 
     static associate({Animal}) {
-      Photo.belongsTo(Animal, {foreignKey: 'animal_id'})
+      Photo.belongsTo(Animal, {foreignKey: 'animal_id', onDelete: 'cascade'})
     }
   }
   Photo.init({

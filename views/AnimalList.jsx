@@ -1,13 +1,13 @@
 const React = require('react');
 const Layout = require('./Layout');
 
-module.exports = function AnimalList({ animals, admin }) {
+module.exports = function AnimalList({ animals, photosList, admin}) {
   return (
     <Layout>
       <ul className="card__lists">
-        {animals.map((card) => (
-          <li className="card__item" id={`${card.id}`}>
-            <img src="" alt={`${card.name}`} />
+        {animals.map((card, i) => (
+          <li className="card__item" id={`${card.id}`} key={card.id}>
+            <img src={`${photosList[i].img_href}`} alt={`${card.name}`} />
             <h2>{card.name}</h2>
             <p>{card.desc}</p>
             {admin ? (

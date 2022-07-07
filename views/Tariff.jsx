@@ -3,42 +3,22 @@ const Layout = require('./Layout');
 
 module.exports = function Tariff({ tariffs }) {
   return (
-    <Layout>   
-      <table className="table">
-        <head>
-          <tr>
-            <th scope="col">Какой сегодня день?</th>
-            <th scope="col">Насколько вы выросли?</th>
-            <th scope="col">Каков итог цены</th>
+    <Layout>
+      <h1>Наши Тарифы</h1>
+      <table>
+        <tr align="center">
+          <th>День</th>
+          <th>Взрослый/ребенок</th>
+          <th>Цена</th>
+        </tr>
+        {tariffs.map((price) => (
+          <tr align="center">
+            <td>{`${price.day_type}`}</td>
+            <td>{`${price.human_type}`}</td>
+            <td>{`${price.price}`}</td>
           </tr>
-        </head>
-        <body>
-          {tariffs.map((price) => (
-            <><tr>
-              <td>Будни</td>
-              <td>Детский</td>
-              <td>{`${price.price}`}</td>
-            </tr>
-              <tr>
-                <td>Будни</td>
-                <td>Взрослый</td>
-                <td>{`${price.price}`}</td>
-              </tr>
-              <tr>
-                <td>Выходной</td>
-                <td>Детский</td>
-                <td>{`${price.price}`}</td>
-              </tr>
-              <tr>
-                <td>Выходной</td>
-                <td>Взрослый</td>
-                <td>{`${price.price}`}</td>
-              </tr>
-            </>
-          ))}
-        </body>
-      </table>    
-         
+        ))}
+      </table>
     </Layout>
   );
 };

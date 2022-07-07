@@ -1,5 +1,6 @@
 const form = document.querySelector('form');
 
+
 form.addEventListener('submit', async (event) => {
   event.preventDefault();
   const desc = event.target.inputDesc.value;

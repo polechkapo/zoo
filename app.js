@@ -21,6 +21,7 @@ app.get('/', (req, res) => {
 
 app.use('/home', homeRouter);
 app.use('/animals', animalsRouter);
+
 app.use('/animalsApi', animalsApiRouter);
 app.use('/tariffs', tariffRouter);
 app.use('/auth', authRouter);

@@ -1,7 +1,7 @@
 const React = require('react');
 
 
-module.exports = function Login({ admin }) {
+module.exports = function Login() {
   return (
 
     <form method="post" action="/auth/login">

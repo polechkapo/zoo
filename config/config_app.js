@@ -5,6 +5,7 @@ const session = require('express-session'); // экспресс для созд�
 const FileStore = require('session-file-store')(session); // это объект который создает папку с сессиями и внутри нее будут файлы с конкретными авторизованными сейчас пользователями
 const morgan = require('morgan');
 const reactSsrMw = require('../middlewares/ssr'); // мв для более короткой отрисовки реакта
+const getUser = require('../middlewares/getUser');
 
 const sessionConfig = {
   store: new FileStore(), // создаем папку в которой будет храниться сессия залогиненого пользователя
@@ -25,4 +26,5 @@ module.exports = function config(app) {
   app.use(express.json()); // распознает json в теле запроса и делает его читаемым для сервера
   app.use(session(sessionConfig));
   app.use(morgan('dev'));
+  app.use(getUser);
 };

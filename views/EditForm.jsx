@@ -4,8 +4,11 @@ const Layout = require('./Layout');
 module.exports = function EditCard({ animal }) {
   return (
     <Layout>
-      <form action="put" name="editForm" id={`${animal.id}`}>
-        <p>картинки</p>
+      <form method="post" encType="multipart/form-data" action="/upload">
+        <input type="file" id={`${animal.id}`} name="inputFile" />
+        <input type="submit" value="Загрузить фото" />
+      </form>
+      <form method="PUT" name="editForm" id={`${animal.id}`}>
         <label htmlFor="inputName">Название животного</label>
         <input type="text" name="inputName" defaultValue={`${animal.name}`} />
         <label htmlFor="inputDesc">Описание животного</label>

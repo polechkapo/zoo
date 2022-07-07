@@ -5,6 +5,8 @@ form.addEventListener('submit', async (event) => {
   const desc = event.target.inputDesc.value;
   const name = event.target.inputName.value;
   const { id } = event.target;
+//   const { photo } = event.target.inputFile.value;
+//   console.log(photo);
 
   const sendChanges = await fetch(`/animalsApi/${form.id}/edit`, {
     method: 'PUT',

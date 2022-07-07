@@ -10,6 +10,8 @@ animalsRouter.route('/')
     const animals = await Animal.findAll();
     const photosAll = await Photo.findAll();
     const photosList = photosAll.filter(((item) => item.img_href.includes('1')));
+    console.log('ANIMALS ==> ', animals);
+    console.log('photosList ==> ', photosList);
     res.renderComponent(AnimalList, { animals, photosList });
   });
 

@@ -4,8 +4,8 @@ const { Tariff } = require('../../db/models');
 
 tariffRouter.route('/')
   .get(async (req, res) => {
-    const tariff = await Tariff.findAll({ raw: true });
-    res.renderComponent(TariffPage, { tariff });
+    const tariffs = await Tariff.findAll({ raw: true });
+    res.renderComponent(TariffPage, { tariffs });
   });
 
 module.exports = tariffRouter;

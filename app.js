@@ -5,9 +5,11 @@ const app = require('express')();
 const configApp = require('./config/config_app'); // подключаем конфиги
 
 const homeRouter = require('./routes/view/home_router');
-const animalsRouter = require('./routes/view/animallist_router')
-const tariffRouter = require('./routes/view/tariff_roter')
-const deleteCardRout = require('./routes/api/delete_card_router')
+const animalsRouter = require('./routes/view/animallist_router');
+const tariffRouter = require('./routes/view/tariff_roter');
+const deleteCardRout = require('./routes/api/delete_card_router');
+const authRouter = require('./routes/view/auth_router');
+const AdminCabinetRouter =require('./routes/view/admin_cabinet_router')
 
 const PORT = process.env.PORT ?? 3000;
 

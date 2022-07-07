@@ -8,11 +8,7 @@ module.exports = function Home({}) {
       <div>Фоновое изображение</div><br></br>
       <div>
         <a href='/animals'>Животные</a><br></br>
-
         <a href='/tariffs'>Тарифы посещеия зоопарка</a><br></br>
-
-        <a href='/tariffs'>Тарифы посещения зоопарка</a><br></br>
-
       </div>
     </Layout>
   );

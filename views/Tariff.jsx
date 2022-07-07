@@ -39,7 +39,6 @@ module.exports = function Tariff({ tariffs }) {
         </body>
       </table>    
          
-
     </Layout>
   );
 };

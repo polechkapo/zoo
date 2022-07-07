@@ -1,9 +1,8 @@
 const React = require('react');
-const Layout = require('./Layout');
+
 
 module.exports = function Login({ admin }) {
   return (
-
 
     <form method="post" action="/auth/login">
       <div className="">
@@ -16,7 +15,6 @@ module.exports = function Login({ admin }) {
       </div>
       <button type="submit" className="">Submit-this-shit</button>
     </form>
-
 
   );
 };

@@ -1,7 +1,9 @@
 const React = require('react');
 const Layout = require('./Layout');
+const { Context } = require('../middlewares/ssr');
 
-module.exports = function AnimalList({ animals, photosList, admin}) {
+module.exports = function AnimalList({ animals, photosList }) {
+  const { admin } = React.useContext(Context);
   return (
     <Layout>
       <ul className="card__lists">
@@ -14,6 +16,7 @@ module.exports = function AnimalList({ animals, photosList, admin}) {
               <div className="card__edit-buttons">
                 <a href={`animals/${card.id}/edit`}>Изменить</a>
                 <a href={`animals/${card.id}/delete`}>Удалить</a>
+                <a href={`animals/${card.id}/info`}>Подробнее</a>}
               </div>
             )
               : <a href={`animals/${card.id}/info`}>Подробнее</a>}

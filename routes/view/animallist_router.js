@@ -8,7 +8,9 @@ animalsRouter.route('/')
   .get(async (req, res) => {
     const animals = await Animal.findAll({ raw: true });
     const photosAll = await Photo.findAll();
+
     const photosList = photosAll.filter((item) => item.img_href.includes('1'));
+
     res.renderComponent(AnimalList, { animals, photosList });
   });
 

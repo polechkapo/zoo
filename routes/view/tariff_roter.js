@@ -6,6 +6,6 @@ tariffRouter.route('/')
   .get(async (req, res) => {
     const tariffs = await Tariff.findAll({raw: true});
     res.renderComponent(TariffPage, { tariffs })
-  })
+  });
 
   module.exports = tariffRouter;

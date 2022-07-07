@@ -6,8 +6,10 @@ const configApp = require('./config/config_app'); // подключаем кон
 
 const authRouter = require('./routes/view/auth_router');
 const homeRouter = require('./routes/view/home_router');
-const animalsRouter = require('./routes/view/animallist_router');
-const tariffRouter = require('./routes/view/tariff_router');
+
+const animalsRouter = require('./routes/view/animallist_router')
+const tariffRouter = require('./routes/view/tariff_roter')
+
 
 const PORT = process.env.PORT ?? 4000;
 
@@ -19,7 +21,9 @@ app.get('/', (req, res) => {
 
 app.use('/home', homeRouter);
 app.use('/animals', animalsRouter);
+
 app.use('/auth', authRouter);
+
 app.use('/tariffs', tariffRouter)
 
 app.listen(PORT, () => {

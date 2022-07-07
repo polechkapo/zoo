@@ -19,32 +19,32 @@ module.exports = {
       updatedAt: new Date(),
     }, {
       animal_id: 2,
-      img_href: '/images/горилла1.jpg',
+      img_href: '/images/горилла-фото1.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
       animal_id: 2,
-      img_href: '/images/горилла2.png',
+      img_href: '/images/горилла-фото2.png',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
       animal_id: 2,
-      img_href: '/images/горилла3.jpg',
+      img_href: '/images/горилла-фото3.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
       animal_id: 3,
-      img_href: '/images/пин1.jpg',
+      img_href: '/images/пингвин-фото1.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
       animal_id: 3,
-      img_href: '/images/пин2.jpg',
+      img_href: '/images/пингвин-фото2.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
       animal_id: 3,
-      img_href: '/images/пин3.jpg',
+      img_href: '/images/пингвин-фото3.jpg',
       createdAt: new Date(),
       updatedAt: new Date(),
     }], {});

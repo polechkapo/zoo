@@ -1,12 +1,11 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Photo extends Model {
-
-    static associate({Animal}) {
-      Photo.belongsTo(Animal, {foreignKey: 'animal_id'})
+    static associate({ Animal }) {
+      Photo.belongsTo(Animal, { foreignKey: 'animal_id' });
     }
   }
   Photo.init({
@@ -16,16 +15,16 @@ module.exports = (sequelize, DataTypes) => {
       references: {
         model: 'Animals',
         key: 'id',
-      }
+      },
     },
     img_href: {
       allowNull: false,
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
     },
   }, {
     sequelize,
     modelName: 'Photo',
-    tableName: 'Photos'
+    tableName: 'Photos',
   });
   return Photo;
 };

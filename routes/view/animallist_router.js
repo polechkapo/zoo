@@ -16,7 +16,6 @@ animalsRouter.route('/:id/info')
   .get(async (req, res) => {
     const animalId = req.params.id;
     const animal = await Animal.findByPk(animalId);
-    
     res.renderComponent(AnimalCard, { animal });
   });
 

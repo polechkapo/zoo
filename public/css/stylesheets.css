@@ -378,6 +378,7 @@ th:first-child, td:first-child {
 	display: flex;
 	flex-direction: column;
 	width: 415px;
+	gap: 10px;
 }
 
 .admin-title {

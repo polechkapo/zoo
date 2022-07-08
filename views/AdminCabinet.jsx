@@ -18,6 +18,7 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
               <input type="password" id="pass" className="" defaultValue={adminMod.password} />
               <label htmlFor="pass1">Проверка:</label>
               <input type="password" id="pass1" className="" defaultValue={admin.password} />
+              <button type='submit' className='edit_form-button'>Изменить</button>
             </form>
           </div>
           <p className='admin-title'>Здесь ты можешь добавить нового администратора:</p>
@@ -28,6 +29,7 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
                 <input type="password" id="pass" className="" placeholder="введите пароль" />
                 <label htmlFor="pass1">Проверка:</label>
                 <input type="password" id="pass1" className="" placeholder="повтор пароля" />
+                <button type='submit' className='edit_form-button'>Добавить</button>
           </form>
           <p className='admin-title'>Список текущих администраторов:</p>
           <div className="bord">

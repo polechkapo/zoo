@@ -14,15 +14,15 @@ animalsApiRouter.route('/:id/edit')
     res.status(200).end('/');
 });
 
-animalsApiRouter.post(':id/upload', fileMW.single('photo'), (req, res) => {
-  console.log(req.params.id);
-  try {
-    if (req.file) {
-      res.json(req.file);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-});
+// animalsApiRouter.post(':id/upload', fileMW.single('photo'), (req, res) => {
+//   console.log(req.params.id);
+//   try {
+//     if (req.file) {
+//       res.json(req.file);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 module.exports = animalsApiRouter;

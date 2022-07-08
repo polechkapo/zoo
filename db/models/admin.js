@@ -5,7 +5,7 @@ const {
 module.exports = (sequelize, DataTypes) => {
   class Admin extends Model {   
     static associate({Animal}) {
-      Admin.hasMany(Animal, {foreignKey: 'id'})
+      Admin.hasMany(Animal, {foreignKey: 'id', onDelete: 'cascade'})
     }
   };
   Admin.init({

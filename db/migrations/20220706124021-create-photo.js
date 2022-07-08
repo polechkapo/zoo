@@ -14,7 +14,9 @@ module.exports = {
         references: {
           model: 'Animals',
           key: 'id',
-        }
+        },
+        onDelete: 'cascade',
+        onUpdate: 'cascade',
       },
       img_href: {
         allowNull: false,

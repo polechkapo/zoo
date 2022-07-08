@@ -307,3 +307,68 @@ a {
 .edit__buttons-more {
 	padding: 10px 26px;
 }
+
+.card {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-width: 0;
+	word-wrap: break-word;
+	background-clip: border-box;
+	border-radius: 0.25rem;
+	width: 800px;
+	margin: 0 auto;
+	gap: 30px;
+	margin-bottom: 50px;
+	margin-top: 50px;
+	padding: 20px;
+	align-items: center;
+}
+
+.edit__buttons-back {
+	padding: 10px 47px;
+}
+
+.edit__container {
+	margin-top: 80px;
+	margin-bottom: 200px;
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+	align-items: center;
+}
+
+form[name ="editForm"] {
+	display: flex;
+	flex-direction: column;
+	width: 800px;
+	gap: 20px;
+}
+
+input {
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.inputEdit {
+	height: 200px;
+	border: 2px solid black;
+	border-radius: 15px;
+	padding: 10px;
+}
+
+.edit_form-button {
+	width: 150px;
+	border-radius: 15px;
+	outline: none;
+	border: 2px solid black;
+	background: transparent;
+	padding: 5px 20px;
+	margin: 0 auto;
+}
+
+.edit_form-button:hover {
+	background-color: black;
+	color: white;
+}

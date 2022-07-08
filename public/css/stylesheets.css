@@ -2,6 +2,25 @@ body {
 	margin: 0;
 	font-size: 18px;
 	line-height: 30px;
+	
+}
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+} 
+
+
+p, label {
+	margin: 0;
 }
 
 .bar-img {
@@ -90,12 +109,18 @@ a {
 }
 
 .btn-x {
-  height: 25px;
-  width: 25px;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 100px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: red;
+  cursor: pointer;
+}
 
-	align-items: center;
+.btn-x:hover {
+	color:black;
+	margin-bottom: 0;
 }
 
 .mask {
@@ -208,24 +233,25 @@ a {
 	list-style-type: none;
 	display: flex;
 	flex-direction: column;
-	gap: 30px;
+	gap: 40px;
 	align-items: center;
 	padding: 0;
 	justify-content: center;
-	margin-bottom: 50px;
 }
 
 .cardItem {
-	width: 800px;
+	width: 500px;
    margin: 0 auto;
    display: flex;
    flex-direction: column;
    gap: 10px;
 	align-items: center;
+	margin-bottom: 50px;
 }
 
 .card_img {
-	width: 100%;
+	width: 500px;
+	height: 50%;
 }
 
 .card__edit-buttons{
@@ -315,15 +341,16 @@ input {
 	width: 150px;
 	border-radius: 15px;
 	outline: none;
+	background-color: black;
+	color: white;
 	border: 2px solid black;
-	background: transparent;
 	padding: 5px 20px;
 	margin: 0 auto;
 }
 
 .edit_form-button:hover {
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 }
 
 .tafifs__container {
@@ -377,10 +404,67 @@ th:first-child, td:first-child {
 .bord {
 	display: flex;
 	flex-direction: column;
-	width: 415px;
-	gap: 10px;
+	width: 100%;
+	gap: 20px;
 }
 
 .admin-title {
 	margin-top: 40px;
+	font-weight: 700;
+	text-align: center;
+}
+
+.card_desc {
+	font-size: 15px;
+	text-align: justify;
+}
+
+.tar {
+	width: 315px;
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+	align-items: center;
+	border: 2px solid black;
+	border-radius: 15px;
+	margin-bottom: 30px;
+	margin-top: 15px;
+}
+
+.tarif {
+   display: flex;
+   justify-content: center;
+   margin: 0 auto;
+   align-items: center;
+   border-radius: 15px;
+   margin-bottom: 30px;
+	white-space: wrap;
+	gap: 20px;
+}
+
+.tarif-edit{
+margin-top: 15px;
+}
+
+.form__add {
+	margin-bottom: 50px;
+	width: 473px;
+	align-items: center;
+}
+
+.bord_login {
+	width: 500px;
+}
+
+.form-welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 300px;
+}
+
+.admin-title-welcome {
+	font-size: 35px;
+	margin-bottom: 30px;
 }

@@ -10,7 +10,7 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
         <div className="cab">
           <h1>привет, Админ!</h1>
           <div className="form_edit-info">
-            <p>Здесь ты можешь изменить свой логин и пароль:</p>
+            <p className="admin-title">Здесь ты можешь изменить свой логин и пароль:</p>
             <form data-id={admin.id} className="bord AdmEdit">
               <label htmlFor="log">Логин:</label>
               <input type="text" id="log" className="" name="login" defaultValue={adminMod.login} />
@@ -35,59 +35,48 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
           <div className="bord delAdm">
             {allAdmin.map((el) => (
 
-              <div className="tar delAdm1">
+              <div className="tar">
                 <p>{el.login}</p>
-
-                <a href="/" data-id={el.id} className="btn-x">X</a>
-
+                <p>
+                  <a href="/" data-id={el.id} className="btn-x">X</a>
+                </p>
               </div>
+
             ))}
           </div>
-          <p>Изменить тарифный план</p>
+          <p className="admin-title">Изменить стоимость билетов:</p>
           <form className="tarif-edit bord">
             {tariff.map((el, i) => (
-              <div className="tar" key={i}>
-                <div>{i + 1}</div>
-                <div className="">
-                  <input type="text" id={`label-${i}`} className="" name={`in1${i}`} defaultValue={el.day_type} />
+              <div className="tarif" key={i}>
+                <div>
+                  {i + 1}
+                  .
                 </div>
-                <div className="">
-                  <input type="text" id={`label-${i}`} className="" name={`in2${i}`} defaultValue={el.human_type} />
-                </div>
-                <div className="">
-                  <input type="number" id={`label-${i}`} className="" name={`in3${i}`} defaultValue={el.price} />
-                </div>
+                <input type="text" id={`label-${i}`} className="" name={`in1${i}`} defaultValue={el.day_type} />
+                <input type="text" id={`label-${i}`} className="" name={`in2${i}`} defaultValue={el.human_type} />
+                <input type="number" id={`label-${i}`} className="" name={`in3${i}`} defaultValue={el.price} />
               </div>
             ))}
-            <button type="submit" className="btn">Изменить</button>
-            {/* <button type="submit" className="btn2">Добавить</button> */}
+            <button type="submit" className="edit_form-button">Изменить</button>
           </form>
-          <p>добавит зверя</p>
-          <form className="bord addAnimals">
-            <div>
-              <label htmlFor="name">Имя</label>
-              <input type="text" id="name" name="name" className="" />
-            </div>
-            <div>
-              <label htmlFor="desc">описание</label>
-              <input type="text" id="desc" name="desc" className="" />
-            </div>
-            <div>
-              <label htmlFor="photo1">фото</label>
-              <input type="text" id="photo1" name="photo1" className="" />
-            </div>
-            <div>
-              <label htmlFor="photo2">фото</label>
-              <input type="text" id="photo2" name="photo2" className="" />
-            </div>
-            <div>
-              <label htmlFor="photo3">фото</label>
-              <input type="text" id="photo3" name="photo3" className="" />
-            </div>
-            <button type="submit" className="btn">Добавить</button>
-          </form>
+          <div className="form_edit-info form__add">
+            <p className="admin-title">Добавь нового обитателя зоопарка:</p>
+            <form className="bord addAnimals">
+              <label htmlFor="log">Его имя:</label>
+              <input type="text" id="log" name="name" className="" />
+              <label htmlFor="log">Его описание:</label>
+              <input type="text" id="log" name="desc" className="" />
+              <label htmlFor="log">Его фото:</label>
+              <input type="text" id="log" name="photo1" className="" />
+              <label htmlFor="log">Его фото:</label>
+              <input type="text" id="log" name="photo1" className="" />
+              <label htmlFor="log">Его фото:</label>
+              <input type="text" id="log" name="photo3" className="" />
+              <button type="submit" className="edit_form-button">Добавить</button>
+            </form>
+          </div>
         </div>
-      ) : <p>ты не админ</p>}
+      ) : <p className="admin-title">Ты не администратор, увы</p>}
     </Layout>
   );
 };

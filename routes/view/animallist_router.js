@@ -3,13 +3,16 @@ const { Animal, Admin, Photo } = require('../../db/models');
 const AnimalList = require('../../views/AnimalList');
 const Card = require('../../views/Animal');
 const EditForm = require('../../views/EditForm');
+const admin = require('../../middlewares/getUser')
 
 animalsRouter.route('/')
   .get(async (req, res) => {
     const animals = await Animal.findAll({ raw: true });
     const photosAll = await Photo.findAll();
+
     const photosList = photosAll.filter((item) => item.img_href.includes('1'));
-    res.renderComponent(AnimalList, { animals, photosList });
+
+    res.renderComponent(AnimalList, { animals, photosList, admin });
   });
 
 animalsRouter.route('/:id/info')

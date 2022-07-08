@@ -377,4 +377,9 @@ th:first-child, td:first-child {
 .bord {
 	display: flex;
 	flex-direction: column;
+	width: 415px;
+}
+
+.admin-title {
+	margin-top: 40px;
 }

@@ -12,24 +12,24 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
           <div className="form_edit-info">
             <p>Здесь ты можешь изменить свой логин и пароль:</p>
             <form className="bord">
-              <label htmlFor="log">Логин</label>
+              <label htmlFor="log">Логин:</label>
               <input type="text" id="log" className="" defaultValue={adminMod.login} />
-              <label htmlFor="pass">Пароль</label>
+              <label htmlFor="pass">Пароль:</label>
               <input type="password" id="pass" className="" defaultValue={adminMod.password} />
-              <label htmlFor="pass1">Проверка</label>
+              <label htmlFor="pass1">Проверка:</label>
               <input type="password" id="pass1" className="" defaultValue={admin.password} />
             </form>
           </div>
-          <p>добавит админа</p>
+          <p className='admin-title'>Здесь ты можешь добавить нового администратора:</p>
           <form className="bord">
-                <label htmlFor="log">логин</label>
+                <label htmlFor="log">Логин:</label>
                 <input type="text" id="log" className="" placeholder="введите логин" />
-                <label htmlFor="pass">пароль</label>
+                <label htmlFor="pass">Пароль:</label>
                 <input type="password" id="pass" className="" placeholder="введите пароль" />
-                <label htmlFor="pass1">проверка</label>
+                <label htmlFor="pass1">Проверка:</label>
                 <input type="password" id="pass1" className="" placeholder="повтор пароля" />
           </form>
-          <p>список админов</p>
+          <p className='admin-title'>Список текущих администраторов:</p>
           <div className="bord">
             {allAdmin.map((el) => (
               <form>

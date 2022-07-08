@@ -10,12 +10,12 @@ module.exports = function Navigation() {
           <>
             <li className="navigation__item"><a href="/auth/logout">Выйти</a></li>
             <li className="navigation__item"><a href="/home">Главная</a></li>
-            <li className="navigation__item"><a href="/cabinet">Кабинет Администратора</a></li>
+            <li className="navigation__item"><a href="/cabinet">Личный кабинет</a></li>
           </>
         )
           : (
             <>
-              <li className="navigation__item"><a href="/auth/login">Вход для сотрудников</a></li>
+              <li className="navigation__item"><a href="/auth/login">Сотрудникам</a></li>
               <li className="navigation__item"><a href="/home">Главная</a></li>
             </>
           )}

@@ -40,8 +40,8 @@ module.exports = function Animal({ animal }) {
           </div>
         </div>
         <p className="card__descr">{`${animal.desc}`}</p>
+        <a href="/animals" className="edit__buttons edit__buttons-back">Назад</a>
       </div>
     </Layout>
   );
 };
-  

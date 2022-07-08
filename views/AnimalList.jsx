@@ -2,7 +2,8 @@ const React = require('react');
 const Layout = require('./Layout');
 const { Context } = require('../middlewares/ssr');
 
-module.exports = function AnimalList({ animals, photosList, admin }) {
+module.exports = function AnimalList({ animals, photosList }) {
+  const { admin } = React.useContext(Context);
   return (
     <Layout>
       <ul className="card__lists" name="Card">

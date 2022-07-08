@@ -21,7 +21,7 @@ const sessionConfig = {
 
 module.exports = function config(app) {
   app.use(reactSsrMw);
-  app.use(express.static('public'));
+  app.use(express.static(path.resolve('public')));
   app.use(express.urlencoded({ extended: true })); // разбирает квери на части чтобы мы могли к ним добраца
   app.use(express.json()); // распознает json в теле запроса и делает его читаемым для сервера
   app.use(session(sessionConfig));

@@ -2,8 +2,8 @@ const adminCabApiRout = require('express').Router();
 // const React = require('react');
 const { Tariff, Admin, Animal } = require('../../db/models');
 // const { Context } = require('../../middlewares/ssr');
-
 // const { admin } = React.useContext(Context);
+const bcrypt = require('bcrypt');
 
 adminCabApiRout.route('/edit').put(async (req, res) => {
   const { arr1, arr2, arr3 } = req.body;
@@ -32,9 +32,10 @@ adminCabApiRout.route('/:id/edit')
 adminCabApiRout.route('/add')
   .put(async (req, res) => {
     const { login, pass1 } = req.body;
+    const hashNewPass = await bcrypt.hash(pass1, 5)
     const admin = await Admin.create({
       login,
-      password: pass1,
+      password: hashNewPass,
     });
     res.json({ admin });
   });

@@ -11,7 +11,7 @@ module.exports = function AnimalList({ animals, photosList }) {
           <li className="cardItem" id={`${card.id}`} key={card.id}>
             <img className="card_img" src={`${photosList[i].img_href}`} alt={`${card.name}`} id={`${card.id}`} />
             <h2 id={`${card.id}`}>{card.name}</h2>
-            <p id={`${card.id}`}>{card.desc}</p>
+            <p className="card_desc" id={`${card.id}`}>{card.desc}</p>
             {admin && (
               <div className="card__edit-buttons">
                 <a href={`/animals/${card.id}/edit`} className="changeCard edit__buttons edit__buttons-change" id={`${card.id}`}>Изменить</a>

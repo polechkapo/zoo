@@ -17,7 +17,7 @@ module.exports = function AnimalList({ animals, photosList, admin }) {
                 <a className="deleteCard" href={`animals/${card.id}`}>Удалить</a>
               </div>
             )}
-            {console.log(admin)} 
+            {console.log(admin)}
             {!admin &&
                (
                 <div className="card__edit-buttons">

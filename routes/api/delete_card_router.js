@@ -1,26 +1,22 @@
 const deleteCardRout = require('express').Router();
-
-const {
-  Animal
-} = require('../../db/models');
-const animal = require('../../db/models/animal');
+const { Animal } = require('../../db/models');
 
 deleteCardRout.route('/:id')
   .delete(async (req, res) => {
     try {
       await Animal.destroy({
         where: {
-          id: req.params.id
-        }
-      })
+          id: req.params.id,
+        },
+      });
       res.json({
-        status: 'ok'
+        status: 'ok',
       });
     } catch {
       res.json({
-        status: 'DB not answer'
+        status: 'DB not answer',
       });
-    };
+    }
   });
 
 module.exports = deleteCardRout;

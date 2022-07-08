@@ -25,6 +25,9 @@ module.exports = function Animal({ animal }) {
               <div className="carousel-item">
                 <img src={`/images/${animal.name}-фото3.jpg`} className="d-block w-100" alt="size" />
               </div>
+              <div className="carousel-item">
+                <img src={`/images/${animal.name}-фото4.jpg`} className="d-block w-100" alt="size" />
+              </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
               <span className="carousel-control-prev-icon" aria-hidden="true" />

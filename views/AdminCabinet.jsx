@@ -11,50 +11,51 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
           <p>привет Админ</p>
           <p>изменить логин и пароль</p>
 
-          <form className="bord">
+          <form data-id={admin.id} className="bord AdmEdit">
             <div className="tar1">
               <div>
                 <label htmlFor="log">логин</label>
-                <input type="text" id="log" className="" defaultValue={adminMod.login} />
+                <input type="text" id="log" className="" name="login" defaultValue={adminMod.login} />
               </div>
               <div>
                 <label htmlFor="pass">пароль</label>
-                <input type="password" id="pass" className="" defaultValue={adminMod.password} />
+                <input type="password" id="pass" className="" name="pass" defaultValue={adminMod.password} />
               </div>
               <div>
                 <label htmlFor="pass1">проверка</label>
-                <input type="password" id="pass1" className="" defaultValue={admin.password} />
+                <input type="password" id="pass1" className="" name="pass2" defaultValue={adminMod.password} />
               </div>
+              <button type="submit" className="btn">Изменить</button>
             </div>
           </form>
-          <p>добавит админа</p>
-          <form className="bord">
+          <p>добавить админа</p>
+          <form className="bord addAdmin">
             <div className="tar1">
               <div>
                 <label htmlFor="log">логин</label>
-                <input type="text" id="log" className="" placeholder="введите логин" />
+                <input type="text" id="log" className="" name="login" placeholder="введите логин" />
               </div>
               <div>
                 <label htmlFor="pass">пароль</label>
-                <input type="password" id="pass" className="" placeholder="введите пароль" />
+                <input type="password" id="pass" className="" name="pass" placeholder="введите пароль" />
               </div>
               <div>
                 <label htmlFor="pass1">проверка</label>
-                <input type="password" id="pass1" className="" placeholder="повтор пароля" />
+                <input type="password" id="pass1" className="" name="pass1" placeholder="повтор пароля" />
               </div>
+              <button type="submit" className="btn">Добавить</button>
             </div>
           </form>
           <p>список админов</p>
-          <div className="bord">
+          <div className="bord delAdm">
             {allAdmin.map((el) => (
-              <form>
-                <div className="tar">
-                  <p>{el.login}</p>
-                  <p>
-                    <button className="btn-x">X</button>
-                  </p>
-                </div>
-              </form>
+
+              <div className="tar delAdm1">
+                <p>{el.login}</p>
+
+                <a href="/" data-id={el.id} className="btn-x">X</a>
+
+              </div>
             ))}
           </div>
           <p>Изменить тарифный план</p>
@@ -73,26 +74,34 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
                 </div>
               </div>
             ))}
-            <button type="submit" className="btn1">Изменить</button>
+            <button type="submit" className="btn">Изменить</button>
             {/* <button type="submit" className="btn2">Добавить</button> */}
           </form>
           <p>добавит зверя</p>
-          <form className="bord">
+          <form className="bord addAnimals">
             <div>
-              <label htmlFor="log">Имя</label>
-              <input type="text" id="log" className="" />
+              <label htmlFor="name">Имя</label>
+              <input type="text" id="name" name="name" className="" />
             </div>
             <div>
-              <label htmlFor="log">описание</label>
-              <input type="text" id="log" className="" />
+              <label htmlFor="desc">описание</label>
+              <input type="text" id="desc" name="desc" className="" />
             </div>
             <div>
-              <label htmlFor="log">фото</label>
-              <input type="text" id="log" className="" />
+              <label htmlFor="photo1">фото</label>
+              <input type="text" id="photo1" name="photo1" className="" />
             </div>
+            <div>
+              <label htmlFor="photo2">фото</label>
+              <input type="text" id="photo2" name="photo2" className="" />
+            </div>
+            <div>
+              <label htmlFor="photo3">фото</label>
+              <input type="text" id="photo3" name="photo3" className="" />
+            </div>
+            <button type="submit" className="btn">Добавить</button>
           </form>
         </div>
-
       ) : <p>ты не админ</p>}
     </Layout>
   );

@@ -1,29 +1,28 @@
-'use strict';
 const {
-  Model
+  Model,
 } = require('sequelize');
+
 module.exports = (sequelize, DataTypes) => {
   class Tariff extends Model {
-  
-    static associate() {};
+    static associate() {}
   }
   Tariff.init({
     day_type: {
       allowNull: false,
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
     },
     human_type: {
       allowNull: false,
-      type: DataTypes.TEXT
+      type: DataTypes.TEXT,
     },
     price: {
       allowNull: false,
-      type: DataTypes.INTEGER
+      type: DataTypes.INTEGER,
     },
   }, {
     sequelize,
     modelName: 'Tariff',
-    tableName: 'Tariffs'
+    tableName: 'Tariffs',
   });
   return Tariff;
 };

@@ -14,8 +14,7 @@ document.querySelector('.card__lists')?.addEventListener('click', async (event) 
 });
 
 const formEdit = document.querySelector('.tarif-edit');
-
-formEdit.addEventListener('submit', async (event) => {
+formEdit?.addEventListener('submit', async (event) => {
   event.preventDefault();
 
   const in1 = event.target.in10.value;
@@ -51,11 +50,16 @@ formEdit.addEventListener('submit', async (event) => {
 });
 
 const AdmEdit = document.querySelector('.AdmEdit');
-AdmEdit.addEventListener('submit', async (event) => {
+AdmEdit?.addEventListener('submit', async (event) => {
   event.preventDefault();
+  // console.log(123);
   const login = event.target.login.value;
-  const pass1 = event.target.pass.value;
+  const pass1 = event.target.pas.value;
   const pass2 = event.target.pass2.value;
+  // console.log(login);
+  // console.log(pass1);
+  // console.log(pass2);
+
   if (pass1 !== pass2) {
     alert('пароль не совпадает, ДУБИНА!');
     return;
@@ -75,11 +79,15 @@ AdmEdit.addEventListener('submit', async (event) => {
 });
 
 const addAdmin = document.querySelector('.addAdmin');
-addAdmin.addEventListener('submit', async (event) => {
+addAdmin?.addEventListener('submit', async (event) => {
   event.preventDefault();
+  console.log(123);
   const login = event.target.login.value;
   const pass1 = event.target.pass.value;
   const pass2 = event.target.pass1.value;
+  console.log(login);
+  console.log(pass1);
+  console.log(pass2);
   if (pass1 !== pass2) {
     alert('пароль не совпадает, ДУБИНА!');
     return;
@@ -114,7 +122,7 @@ addAdmin.addEventListener('submit', async (event) => {
 });
 
 const delAdm = document.querySelector('.delAdm');
-delAdm.addEventListener('click', async (event) => {
+delAdm?.addEventListener('click', async (event) => {
   event.preventDefault();
   if (event.target.classList.contains('btn-x')) {
     const { id } = event.target.dataset;
@@ -128,7 +136,7 @@ delAdm.addEventListener('click', async (event) => {
 });
 
 const addAnimals = document.querySelector('.addAnimals');
-addAnimals.addEventListener('submit', async (event) => {
+addAnimals?.addEventListener('submit', async (event) => {
   event.preventDefault();
   const name = event.target.name.value;
   const desc = event.target.desc.value;
@@ -147,13 +155,17 @@ addAnimals.addEventListener('submit', async (event) => {
   const req = await res.text();
   alert('гамункул добавлен добавлана');
 });
-const form = document.querySelector('form');
-form.addEventListener('submit', async (event) => {
+// console.log(123);
+
+const editform = document.querySelector('.editForm');
+console.log(editform);
+editform?.addEventListener('submit', async (event) => {
   event.preventDefault();
+  console.log(123);
   const desc = event.target.inputDesc.value;
   const name = event.target.inputName.value;
   const { id } = event.target;
-  const sendChanges = await fetch(`/animalsApi/${form.id}/edit`, {
+  const sendChanges = await fetch(`/animalsApi/${editform.id}/edit`, {
     method: 'PUT',
     headers: {
       'Content-type': 'application/json',

@@ -20,7 +20,6 @@ adminCabApiRout.route('/edit').put(async (req, res) => {
 });
 adminCabApiRout.route('/:id/edit')
   .put(async (req, res) => {
-    console.log('=======>');
     const { id } = req.params;
     const { login, pass1 } = req.body;
     const admin = await Admin.findOne({ where: { id } });
@@ -32,7 +31,6 @@ adminCabApiRout.route('/:id/edit')
 
 adminCabApiRout.route('/add')
   .put(async (req, res) => {
-    console.log('=======>');
     const { login, pass1 } = req.body;
     const admin = await Admin.create({
       login,
@@ -43,7 +41,6 @@ adminCabApiRout.route('/add')
 
 adminCabApiRout.route('/:id/del')
   .delete(async (req, res) => {
-    console.log('=======>');
     const { id } = req.params;
     const name = await Admin.findOne({ where: { id } });
     await Admin.destroy({ where: { id } });
@@ -52,9 +49,7 @@ adminCabApiRout.route('/:id/del')
 
 adminCabApiRout.route('/add/animal')
   .put(async (req, res) => {
-    const { a } = req.session;
-    console.log('=======>', a);
-    // console.log('=======>');
+    const { admin: a } = req.session;
     const { name, desc } = req.body;
     const animal = await Animal.create({
       name,

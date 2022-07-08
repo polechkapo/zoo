@@ -6,6 +6,7 @@ module.exports = function Navigation() {
   return (
     <nav className="navigation">
       <ul className="navigation__lists">
+        
         {admin ? (
           <>
             <li className="navigation__item"><a className="navigation_link" href="/auth/logout">Выйти</a></li>

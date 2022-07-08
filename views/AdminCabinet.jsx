@@ -11,28 +11,28 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
           <h1>привет, Админ!</h1>
           <div className="form_edit-info">
             <p>Здесь ты можешь изменить свой логин и пароль:</p>
-            <form className="bord">
+            <form data-id={admin.id} className="bord AdmEdit">
               <label htmlFor="log">Логин:</label>
-              <input type="text" id="log" className="" defaultValue={adminMod.login} />
+              <input type="text" id="log" className="" name="login" defaultValue={adminMod.login} />
               <label htmlFor="pass">Пароль:</label>
-              <input type="password" id="pass" className="" defaultValue={adminMod.password} />
+              <input type="password" id="pass" className="" name="pas" defaultValue={adminMod.password} />
               <label htmlFor="pass1">Проверка:</label>
-              <input type="password" id="pass1" className="" defaultValue={admin.password} />
-              <button type='submit' className='edit_form-button'>Изменить</button>
+              <input type="password" id="pass1" className="" name="pass2" defaultValue={admin.password} />
+              <button type="submit" className="edit_form-button">Изменить</button>
             </form>
           </div>
-          <p className='admin-title'>Здесь ты можешь добавить нового администратора:</p>
-          <form className="bord">
-                <label htmlFor="log">Логин:</label>
-                <input type="text" id="log" className="" placeholder="введите логин" />
-                <label htmlFor="pass">Пароль:</label>
-                <input type="password" id="pass" className="" placeholder="введите пароль" />
-                <label htmlFor="pass1">Проверка:</label>
-                <input type="password" id="pass1" className="" placeholder="повтор пароля" />
-                <button type='submit' className='edit_form-button'>Добавить</button>
+          <p className="admin-title">Здесь ты можешь добавить нового администратора:</p>
+          <form className="bord addAdmin">
+            <label htmlFor="log">Логин:</label>
+            <input type="text" id="log" className="" name="login" placeholder="введите логин" />
+            <label htmlFor="pass">Пароль:</label>
+            <input type="password" id="pass" className="" name="pas" placeholder="введите пароль" />
+            <label htmlFor="pass1">Проверка:</label>
+            <input type="password" id="pass1" className="" name="pass2" placeholder="повтор пароля" />
+            <button type="submit" className="edit_form-button">Добавить</button>
           </form>
-          <p className='admin-title'>Список текущих администраторов:</p>
-          <div className="bord">
+          <p className="admin-title">Список текущих администраторов:</p>
+          <div className="bord delAdm">
             {allAdmin.map((el) => (
 
               <div className="tar delAdm1">

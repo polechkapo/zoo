@@ -10,7 +10,7 @@ authRouter.route('/login')
     const { login, password } = req.body;
     const admin = await Admin.findOne({ where: { login } });
     if (admin && password === admin.password) {
-      req.session.a = admin.id;
+      req.session.admin = admin.id;
       res.redirect('/');
     } else { res.send('Логин или пароль неверны!'); }
   });

@@ -8,41 +8,26 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
     <Layout>
       {admin ? (
         <div className="cab">
-          <p>привет Админ</p>
-          <p>изменить логин и пароль</p>
-
-          <form className="bord">
-            <div className="tar1">
-              <div>
-                <label htmlFor="log">логин</label>
-                <input type="text" id="log" className="" defaultValue={adminMod.login} />
-              </div>
-              <div>
-                <label htmlFor="pass">пароль</label>
-                <input type="password" id="pass" className="" defaultValue={adminMod.password} />
-              </div>
-              <div>
-                <label htmlFor="pass1">проверка</label>
-                <input type="password" id="pass1" className="" defaultValue={admin.password} />
-              </div>
-            </div>
-          </form>
+          <h1>привет, Админ!</h1>
+          <div className="form_edit-info">
+            <p>Здесь ты можешь изменить свой логин и пароль:</p>
+            <form className="bord">
+              <label htmlFor="log">Логин</label>
+              <input type="text" id="log" className="" defaultValue={adminMod.login} />
+              <label htmlFor="pass">Пароль</label>
+              <input type="password" id="pass" className="" defaultValue={adminMod.password} />
+              <label htmlFor="pass1">Проверка</label>
+              <input type="password" id="pass1" className="" defaultValue={admin.password} />
+            </form>
+          </div>
           <p>добавит админа</p>
           <form className="bord">
-            <div className="tar1">
-              <div>
                 <label htmlFor="log">логин</label>
                 <input type="text" id="log" className="" placeholder="введите логин" />
-              </div>
-              <div>
                 <label htmlFor="pass">пароль</label>
                 <input type="password" id="pass" className="" placeholder="введите пароль" />
-              </div>
-              <div>
                 <label htmlFor="pass1">проверка</label>
                 <input type="password" id="pass1" className="" placeholder="повтор пароля" />
-              </div>
-            </div>
           </form>
           <p>список админов</p>
           <div className="bord">

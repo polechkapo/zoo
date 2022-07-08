@@ -9,20 +9,21 @@ module.exports = function AnimalList({ animals, photosList }) {
       <ul className="card__lists" name="Card">
         {animals.map((card, i) => (
           <li className="cardItem" id={`${card.id}`} key={card.id}>
-            <img src={`${photosList[i].img_href}`} alt={`${card.name}`} id={`${card.id}`} />
+            <img className="card_img" src={`${photosList[i].img_href}`} alt={`${card.name}`} id={`${card.id}`} />
             <h2 id={`${card.id}`}>{card.name}</h2>
             <p id={`${card.id}`}>{card.desc}</p>
             {admin && (
               <div className="card__edit-buttons">
-                <a href={`/animals/${card.id}/edit`} className="changeCard" id={`${card.id}`}>Изменить</a>
-                <a className="deleteCard" href={`animals/${card.id}`}>Удалить</a>
+                <a href={`/animals/${card.id}/edit`} className="changeCard edit__buttons edit__buttons-change" id={`${card.id}`}>Изменить</a>
+                <a className="deleteCard edit__buttons edit__buttons-delete" href={`animals/${card.id}`}>Удалить</a>
+                <a className="edit__buttons edit__buttons-more" href={`animals/${card.id}/info`}>Подробнее</a>
               </div>
             )}
-            {console.log(admin)} 
+            {console.log(admin)}
             {!admin &&
                (
                 <div className="card__edit-buttons">
-                  <a href={`animals/${card.id}/info`}>Подробнее</a>
+                  <a className="edit__buttons edit__buttons-more" href={`animals/${card.id}/info`}>Подробнее</a>
                 </div>
               )}
           </li>

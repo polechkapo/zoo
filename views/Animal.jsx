@@ -14,6 +14,7 @@ module.exports = function Animal({ animal }) {
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" className="active" aria-current="true" aria-label="Slide 1" />
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2" />
               <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3" />
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4" />
             </div>
             <div className="carousel-inner">
               <div className="carousel-item active">
@@ -24,6 +25,9 @@ module.exports = function Animal({ animal }) {
               </div>
               <div className="carousel-item">
                 <img src={`/images/${animal.name}-фото3.jpg`} className="d-block w-100" alt="size" />
+              </div>
+              <div className="carousel-item">
+                <img src={`/images/${animal.name}-фото4.jpg`} className="d-block w-100" alt="size" />
               </div>
             </div>
             <button className="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
@@ -37,8 +41,8 @@ module.exports = function Animal({ animal }) {
           </div>
         </div>
         <p className="card__descr">{`${animal.desc}`}</p>
+        <a href="/animals" className="edit__buttons edit__buttons-back">Назад</a>
       </div>
     </Layout>
   );
 };
-  

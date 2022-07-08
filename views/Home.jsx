@@ -27,12 +27,14 @@ module.exports = function Home() {
           <li><img className="content__img" src="images/main_3.jpeg" alt="" /></li>
         </ul>
       </div>
+      <div className='content__container-prices'>
       <div className="content__prices">
         <h2 className="content__prices-title">💶💶💶Стоимость посещения зоопарка💶💶💶</h2>
         <p className="content__prices-description">
           Стоимость посещения нашего зоопарка рассчитывается исходя из возраста и дня недели.
         </p>
         <a className="btn btn-lg btn-price" href="/tariffs" role="button">Тарифы зоопарка</a>
+        </div>
       </div>
     </Layout>
   );

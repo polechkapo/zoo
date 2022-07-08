@@ -3,26 +3,26 @@
 module.exports = {
   async up(queryInterface) {
     await queryInterface.bulkInsert('Tariffs', [{
-      day_type: 'weekday',
-      human_type: 'child',
+      day_type: 'Будни',
+      human_type: 'Детский',
       price: 100,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-      day_type: 'weekday',
-      human_type: 'adult',
+      day_type: 'Будни',
+      human_type: 'Взрослый',
       price: 200,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-      day_type: 'weekend',
-      human_type: 'child',
+      day_type: 'Выходной',
+      human_type: 'Детский',
       price: 150,
       createdAt: new Date(),
       updatedAt: new Date(),
     }, {
-      day_type: 'weekend',
-      human_type: 'adult',
+      day_type: 'Выходной',
+      human_type: 'Взрослый',
       price: 300,
       createdAt: new Date(),
       updatedAt: new Date(),

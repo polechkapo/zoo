@@ -1,6 +1,6 @@
 const animalsApiRouter = require('express').Router();
 const { Animal } = require('../../db/models');
-const Photo = require('../../db/models/photo');
+// const Photo = require('../../db/models/photo');
 const fileMW = require('../../middlewares/file');
 
 animalsApiRouter.route('/:id/edit')
@@ -14,15 +14,15 @@ animalsApiRouter.route('/:id/edit')
     res.status(200).end('/');
 });
 
-animalsApiRouter.post(':id/upload', fileMW.single('photo'), (req, res) => {
-  console.log(req.params.id);
-  try {
-    if (req.file) {
-      res.json(req.file);
-    }
-  } catch (error) {
-    console.log(error);
-  }
-});
+// animalsApiRouter.post(':id/upload', fileMW.single('photo'), (req, res) => {
+//   console.log(req.params.id);
+//   try {
+//     if (req.file) {
+//       res.json(req.file);
+//     }
+//   } catch (error) {
+//     console.log(error);
+//   }
+// });
 
 module.exports = animalsApiRouter;

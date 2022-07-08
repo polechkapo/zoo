@@ -19,17 +19,20 @@ module.exports = function Layout({ title, children }) {
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossOrigin="anonymous" />
         <link href="/css/stylesheets.css" rel="stylesheet" />
       </head>
-      <header className="header">
-        <img src="/images/obz.jpeg" alt="Логотип урюпинского зоопарка" className="bar-img" />
-        <Navbar />
-      </header>
       <body>
-        {children}
+        <header className="header">
+          <img src="/images/obz.jpeg" alt="Логотип урюпинского зоопарка" className="bar-img" />
+          <Navbar />
+        </header>
+        <main>
+          {children}
+        </main>
+
+        <footer className="footer">
+          <img src="/images/obz.jpeg" alt="Логотип урюпинского зоопарка" className="bar-img" />
+          <Footer />
+        </footer>
       </body>
-      <footer className="footer">
-        <img src="/images/obz.jpeg" alt="Логотип урюпинского зоопарка" className="bar-img" />
-        <Footer />
-      </footer>
     </html>
   );
 };

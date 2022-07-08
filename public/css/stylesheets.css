@@ -2,7 +2,22 @@ body {
 	margin: 0;
 	font-size: 18px;
 	line-height: 30px;
+	
 }
+
+.header,
+.footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex-grow: 1;
+  position: relative;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  height: 100%;
+} 
+
 
 p, label {
 	margin: 0;
@@ -435,4 +450,21 @@ margin-top: 15px;
 	margin-bottom: 50px;
 	width: 473px;
 	align-items: center;
+}
+
+.bord_login {
+	width: 500px;
+}
+
+.form-welcome {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin-top: 50px;
+	margin-bottom: 300px;
+}
+
+.admin-title-welcome {
+	font-size: 35px;
+	margin-bottom: 30px;
 }

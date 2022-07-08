@@ -7,7 +7,9 @@ const admin = require('../../middlewares/getUser');
 
 animalsRouter.route('/')
   .get(async (req, res) => {
-    const animals = await Animal.findAll({ raw: true });
+    const animals = await Animal.findAll({
+      order: [['id', 'ASC']],
+    });
     const photosAll = await Photo.findAll();
 
     const photosList = photosAll.filter((item) => item.img_href.includes('1'));

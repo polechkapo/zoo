@@ -22,7 +22,7 @@ module.exports = function AdminCabinet({ tariff, adminMod, allAdmin }) {
             </form>
           </div>
           <p className="admin-title">Здесь ты можешь добавить нового администратора:</p>
-          <form className="bord addAdmin">
+          <form className="bord addAdmin board-add">
             <label htmlFor="log">Логин:</label>
             <input type="text" id="log" className="" name="login" placeholder="введите логин" />
             <label htmlFor="pass">Пароль:</label>

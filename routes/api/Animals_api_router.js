@@ -12,6 +12,7 @@ animalsApiRouter.route('/:id/edit')
     card.desc = desc;
     card.save();
     res.status(200);
+    res.send();
   });
 
 // animalsApiRouter.post(':id/upload', fileMW.single('photo'), (req, res) => {

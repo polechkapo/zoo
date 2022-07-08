@@ -1,5 +1,5 @@
 const animalsRouter = require('express').Router();
-const { Animal, Admin, Photo } = require('../../db/models');
+const { Animal, Photo } = require('../../db/models');
 const AnimalList = require('../../views/AnimalList');
 const AnimalCard = require('../../views/Animal');
 

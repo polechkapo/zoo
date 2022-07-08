@@ -5,14 +5,14 @@ const fileMW = require('../../middlewares/file');
 
 animalsApiRouter.route('/:id/edit')
   .put(async (req, res) => {
-    console.log(req.files);
+    // console.log(req.files);
     const { id, name, desc } = req.body;
     const card = await Animal.findOne({ where: { id } });
-    card.name = name,
-    card.desc = desc,
+    card.name = name;
+    card.desc = desc;
     card.save();
-    res.status(200).end('/');
-});
+    res.status(200);
+  });
 
 // animalsApiRouter.post(':id/upload', fileMW.single('photo'), (req, res) => {
 //   console.log(req.params.id);

@@ -6,7 +6,7 @@ module.exports = function EditCard({ animal }) {
     <Layout>
       <div className="edit__container">
         <h1 className="edit__title">Давай изменим нашу карточку!</h1>
-        <form method="PUT" name="editForm" id={`${animal.id}`}>
+        <form className="editForm" name="editForm" id={`${animal.id}`}>
           <label htmlFor="inputName">Название животного</label>
           <input type="text" name="inputName" defaultValue={`${animal.name}`} />
           <label htmlFor="inputDesc">Описание животного</label>

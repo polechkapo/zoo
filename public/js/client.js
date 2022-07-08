@@ -106,12 +106,12 @@ addAdmin?.addEventListener('submit', async (event) => {
   console.log('===>', req.admin);
   alert(`админ ${req.admin.login} успешно добавлен`);
   const html = (
-    `<div className="tar delAdm1">
-      <p>{${req.admin.login}</p>
-      <a href="/" data-id={${req.admin.id} className="btn-x">X</a>
+    `<div class="tar delAdm1">
+      <p>${req.admin.login}</p>
+      <a href="/" data-id=${req.admin.id} class="btn-x">X</a>
     </div>`
   );
-  document.querySelector('.delAdm').insertAdjacentHTML('delAdm1', html);
+  document.querySelector('.delAdm').insertAdjacentHTML('afterBegin', html);
   // document.querySelector('#die-container').innerHTML = (
   //   `<div class="die">
   //       <span class="roll">
@@ -131,7 +131,7 @@ delAdm?.addEventListener('click', async (event) => {
     });
     const req = await res.text();
     alert(`админ ${req} успешно удален`);
-    document.querySelector('.delAdm1').remove();
+    event.target.closest('.delAdm1').remove();
   }
 });
 
@@ -172,6 +172,7 @@ editform?.addEventListener('submit', async (event) => {
     },
     body: JSON.stringify({ id, name, desc }),
   });
+  console.log(123);
   if (sendChanges.status === 200) {
     window.location = '/animals';
   }

@@ -17,7 +17,7 @@ animalsApiRouter.route('/:id/edit')
 // animalsApiRouter.post(':id/upload', fileMW.single('photo'), (req, res) => {
 //   console.log(req.params.id);
 //   try {
-//     if (req.file) {
+//     if (req.file){
 //       res.json(req.file);
 //     }
 //   } catch (error) {

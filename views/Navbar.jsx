@@ -8,9 +8,9 @@ module.exports = function Navigation() {
       <ul className="navigation__lists">
         {admin ? (
           <>
-            <li className="navigation__item"><a href="/auth/logout">Выйти</a></li>
-            <li className="navigation__item"><a href="/home">Главная</a></li>
-            <li className="navigation__item"><a href="/cabinet">Личный кабинет</a></li>
+            <li className="navigation__item"><a className="navigation_link" href="/auth/logout">Выйти</a></li>
+            <li className="navigation__item"><a className="navigation_link" href="/home">Главная</a></li>
+            <li className="navigation__item"><a className="navigation_link" href="/cabinet">Личный кабинет</a></li>
           </>
         )
           : (

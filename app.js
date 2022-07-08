@@ -13,7 +13,6 @@ const authRouter = require('./routes/view/auth_router');
 const AdminCabinetRouter = require('./routes/view/admin_cabinet_router');
 const AdminCabinetApiRouter = require('./routes/api/admin_cab_api');
 
-const AdminCabinetRouter =require('./routes/view/admin_cabinet_router')
 const animalsApiRouter = require('./routes/api/Animals_api_router');
 
 
